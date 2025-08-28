@@ -42,6 +42,7 @@
             transform: translateX(0);
             transition: transform 0.3s ease;
             z-index: 1000;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
         }
 
         .sidebar::-webkit-scrollbar {
@@ -1241,9 +1242,432 @@
                 </div>
             </section>
 
-            <!-- Continue with other sections... Due to length, I'll continue with the next major section -->
-            
-            <!-- Stoichiometry - Greatly Expanded -->
+            <!-- Gases and Kinetic Theory - Complete Section -->
+            <section class="topic-section" id="gases">
+                <div class="topic-header">
+                    <h2>Gases and Kinetic Molecular Theory</h2>
+                </div>
+
+                <div class="topic-intro">
+                    Gas behavior follows predictable mathematical relationships. Master gas laws for success in pressure, volume, temperature, and mole calculations that frequently appear on exams.
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-header" onclick="toggleSubsection(this)">
+                        Gas Laws (Complete) <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="subsection-content active">
+                        <div class="formula-box">
+                            <strong>Individual Gas Laws:</strong><br>
+                            <strong>Boyle's Law:</strong> P₁V₁ = P₂V₂ (constant T, n)<br>
+                            <strong>Charles's Law:</strong> V₁/T₁ = V₂/T₂ (constant P, n)<br>
+                            <strong>Gay-Lussac's Law:</strong> P₁/T₁ = P₂/T₂ (constant V, n)<br>
+                            <strong>Avogadro's Law:</strong> V₁/n₁ = V₂/n₂ (constant P, T)<br><br>
+                            <strong>Combined Gas Law:</strong> (P₁V₁)/T₁ = (P₂V₂)/T₂<br>
+                            <strong>Ideal Gas Law:</strong> PV = nRT
+                        </div>
+
+                        <div class="constants-table">
+                            <table>
+                                <thead>
+                                    <tr><th>R Value</th><th>Units</th><th>When to Use</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>0.0821</td><td>L·atm/(mol·K)</td><td>Pressure in atm, volume in L</td></tr>
+                                    <tr><td>8.314</td><td>J/(mol·K)</td><td>Energy calculations</td></tr>
+                                    <tr><td>62.4</td><td>L·torr/(mol·K)</td><td>Pressure in torr</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="practice-problem">
+                            <strong>Complete Gas Law Problem:</strong><br>
+                            A 2.5 L balloon at 25°C and 1.2 atm is heated to 75°C. If the pressure increases to 1.8 atm, what is the new volume?<br><br>
+                            <strong>Solution:</strong><br>
+                            Using combined gas law: (P₁V₁)/T₁ = (P₂V₂)/T₂<br>
+                            T₁ = 25°C + 273 = 298 K, T₂ = 75°C + 273 = 348 K<br>
+                            (1.2 atm × 2.5 L)/298 K = (1.8 atm × V₂)/348 K<br>
+                            V₂ = (1.2 × 2.5 × 348)/(298 × 1.8) = 1.94 L
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-header" onclick="toggleSubsection(this)">
+                        Kinetic Molecular Theory <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="subsection-content">
+                        <h3>Five Key Assumptions:</h3>
+                        <ol>
+                            <li><strong>Gas particles have negligible volume</strong> compared to container</li>
+                            <li><strong>No intermolecular forces</strong> between gas particles</li>
+                            <li><strong>Particles in constant, random motion</strong> - straight lines until collision</li>
+                            <li><strong>Collisions are perfectly elastic</strong> - no energy lost</li>
+                            <li><strong>Average kinetic energy ∝ absolute temperature</strong></li>
+                        </ol>
+
+                        <div class="formula-box">
+                            <strong>Key KMT Equations:</strong><br>
+                            Average KE = (3/2)RT<br>
+                            Root Mean Square Speed: v_rms = √(3RT/M)<br>
+                            Graham's Law: Rate₁/Rate₂ = √(M₂/M₁)
+                        </div>
+
+                        <div class="exam-tip">
+                            <strong>⚡ Exam Applications:</strong><br>
+                            • Lighter gases move faster at same temperature<br>
+                            • Real gases deviate from ideal at high P, low T<br>
+                            • Use KMT to explain gas law relationships
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Solutions and Colligative Properties - Complete Section -->
+            <section class="topic-section" id="solutions">
+                <div class="topic-header">
+                    <h2>Solutions and Colligative Properties</h2>
+                </div>
+
+                <div class="topic-intro">
+                    Solution chemistry governs how substances dissolve, concentrate, and affect physical properties. Critical for understanding biological systems, industrial processes, and analytical chemistry.
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-header" onclick="toggleSubsection(this)">
+                        Concentration Units (All Types) <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="subsection-content active">
+                        <div class="formula-box">
+                            <strong>Major Concentration Units:</strong><br>
+                            <strong>Molarity (M):</strong> mol solute / L solution<br>
+                            <strong>Molality (m):</strong> mol solute / kg solvent<br>
+                            <strong>Mass %:</strong> (g solute / g solution) × 100%<br>
+                            <strong>Mole Fraction (χ):</strong> mol component / total mol<br>
+                            <strong>Parts per million (ppm):</strong> (g solute / g solution) × 10⁶
+                        </div>
+
+                        <div class="step-by-step">
+                            <h4>Dilution Problems:</h4>
+                            <ol>
+                                <li>Use M₁V₁ = M₂V₂ for dilutions</li>
+                                <li>Remember: moles of solute remain constant</li>
+                                <li>Final volume = initial volume + added solvent</li>
+                            </ol>
+                        </div>
+
+                        <div class="practice-problem">
+                            <strong>Multi-Unit Problem:</strong><br>
+                            Calculate molarity, molality, and mole fraction of 20.0 g NaCl in 200.0 g H₂O (final volume = 208 mL)<br><br>
+                            <strong>Solution:</strong><br>
+                            Moles NaCl = 20.0 g ÷ 58.44 g/mol = 0.342 mol<br>
+                            • Molarity = 0.342 mol ÷ 0.208 L = 1.64 M<br>
+                            • Molality = 0.342 mol ÷ 0.200 kg = 1.71 m<br>
+                            • Moles H₂O = 200.0 g ÷ 18.02 g/mol = 11.10 mol<br>
+                            • χ_NaCl = 0.342 / (0.342 + 11.10) = 0.0299
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-header" onclick="toggleSubsection(this)">
+                        Colligative Properties (Complete) <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="subsection-content">
+                        <div class="key-concept">
+                            <strong>Colligative Properties:</strong> Depend only on NUMBER of particles, not identity<br>
+                            Critical factor: <strong>van't Hoff factor (i)</strong> = particles per formula unit
+                        </div>
+
+                        <div class="formula-box">
+                            <strong>Four Colligative Properties:</strong><br>
+                            1. <strong>Vapor Pressure Lowering:</strong> ΔP = χ_solute × P°_solvent<br>
+                            2. <strong>Boiling Point Elevation:</strong> ΔT_b = K_b × m × i<br>
+                            3. <strong>Freezing Point Depression:</strong> ΔT_f = K_f × m × i<br>
+                            4. <strong>Osmotic Pressure:</strong> π = MRTi
+                        </div>
+
+                        <div class="constants-table">
+                            <table>
+                                <thead>
+                                    <tr><th>Solvent</th><th>K_f (°C/m)</th><th>K_b (°C/m)</th><th>Normal fp/bp</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Water</td><td>1.86</td><td>0.52</td><td>0°C / 100°C</td></tr>
+                                    <tr><td>Benzene</td><td>5.12</td><td>2.53</td><td>5.5°C / 80.1°C</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="exam-tip">
+                            <strong>💡 van't Hoff Factors:</strong><br>
+                            • Nonelectrolytes (glucose, sucrose): i = 1<br>
+                            • NaCl, HCl: i ≈ 2<br>
+                            • CaCl₂, Na₂SO₄: i ≈ 3<br>
+                            • Al₂(SO₄)₃: i ≈ 5
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Thermochemistry - Complete Section -->
+            <section class="topic-section" id="thermochemistry">
+                <div class="topic-header">
+                    <h2>Thermochemistry and Energetics</h2>
+                </div>
+
+                <div class="topic-intro">
+                    Energy changes drive all chemical reactions. Understanding enthalpy, entropy, and free energy is essential for predicting reaction spontaneity and calculating heat transfer.
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-header" onclick="toggleSubsection(this)">
+                        Enthalpy and Calorimetry <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="subsection-content active">
+                        <div class="formula-box">
+                            <strong>Fundamental Equations:</strong><br>
+                            <strong>Heat Transfer:</strong> q = mcΔT<br>
+                            <strong>Enthalpy Change:</strong> ΔH = H_products - H_reactants<br>
+                            <strong>Calorimetry:</strong> q_system + q_surroundings = 0<br>
+                            <strong>Heat Capacity:</strong> q = CΔT
+                        </div>
+
+                        <div class="key-concept">
+                            <strong>Sign Conventions:</strong><br>
+                            • <strong>Endothermic:</strong> ΔH > 0 (system absorbs heat)<br>
+                            • <strong>Exothermic:</strong> ΔH < 0 (system releases heat)<br>
+                            • <strong>Heat flows from hot → cold</strong>
+                        </div>
+
+                        <div class="practice-problem">
+                            <strong>Calorimetry Problem:</strong><br>
+                            25.0 g of hot metal (c = 0.45 J/g°C) at 95.0°C is dropped into 100.0 g water at 22.0°C. Final temperature is 24.3°C. What's the specific heat of water?<br><br>
+                            <strong>Solution:</strong><br>
+                            q_metal = 25.0 g × 0.45 J/g°C × (24.3 - 95.0)°C = -798 J<br>
+                            q_water = -q_metal = +798 J<br>
+                            798 J = 100.0 g × c × (24.3 - 22.0)°C<br>
+                            c = 798 J ÷ (100.0 g × 2.3°C) = 3.47 J/g°C ≈ 4.18 J/g°C
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-header" onclick="toggleSubsection(this)">
+                        Hess's Law and Formation Reactions <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="subsection-content">
+                        <div class="key-concept">
+                            <strong>Hess's Law:</strong> Total enthalpy change is independent of pathway<br>
+                            <strong>Standard Formation Reaction:</strong> 1 mole compound from elements in standard states
+                        </div>
+
+                        <div class="formula-box">
+                            <strong>Hess's Law Applications:</strong><br>
+                            ΔH°_rxn = Σ ΔH°_f(products) - Σ ΔH°_f(reactants)<br>
+                            ΔH°_rxn = Σ ΔH°_c(reactants) - Σ ΔH°_c(products)<br>
+                            ΔH°_rxn = Σ Bond energies broken - Σ Bond energies formed
+                        </div>
+
+                        <div class="step-by-step">
+                            <h4>Hess's Law Problem Strategy:</h4>
+                            <ol>
+                                <li>Write target equation</li>
+                                <li>Manipulate given equations (reverse, multiply)</li>
+                                <li>Adjust ΔH values accordingly</li>
+                                <li>Add equations to get target equation</li>
+                                <li>Add corresponding ΔH values</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Acids and Bases - Complete Section -->
+            <section class="topic-section" id="acids">
+                <div class="topic-header">
+                    <h2>Acids, Bases, and pH</h2>
+                </div>
+
+                <div class="topic-intro">
+                    Acid-base chemistry is fundamental to biological systems, industrial processes, and analytical chemistry. Master pH calculations, buffer systems, and titration curves for exam success.
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-header" onclick="toggleSubsection(this)">
+                        pH and pOH Calculations (Complete) <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="subsection-content active">
+                        <div class="formula-box">
+                            <strong>Fundamental Relationships:</strong><br>
+                            pH = -log[H⁺]<br>
+                            pOH = -log[OH⁻]<br>
+                            pH + pOH = 14.00 (at 25°C)<br>
+                            K_w = [H⁺][OH⁻] = 1.0 × 10⁻¹⁴<br>
+                            [H⁺] = 10^(-pH)<br>
+                            [OH⁻] = 10^(-pOH)
+                        </div>
+
+                        <div class="key-concept">
+                            <strong>pH Scale:</strong><br>
+                            • pH < 7: Acidic ([H⁺] > [OH⁻])<br>
+                            • pH = 7: Neutral ([H⁺] = [OH⁻])<br>
+                            • pH > 7: Basic ([H⁺] < [OH⁻])<br>
+                            • Each pH unit = 10× change in [H⁺]
+                        </div>
+
+                        <div class="practice-problem">
+                            <strong>Multi-Step pH Problem:</strong><br>
+                            Calculate pH of 0.025 M Ba(OH)₂ solution<br><br>
+                            <strong>Solution:</strong><br>
+                            Ba(OH)₂ → Ba²⁺ + 2OH⁻<br>
+                            [OH⁻] = 2 × 0.025 M = 0.050 M<br>
+                            pOH = -log(0.050) = 1.30<br>
+                            pH = 14.00 - 1.30 = 12.70
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-header" onclick="toggleSubsection(this)">
+                        Weak Acids and Bases (ICE Tables) <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="subsection-content">
+                        <div class="formula-box">
+                            <strong>Equilibrium Expressions:</strong><br>
+                            <strong>Weak Acid:</strong> K_a = [H⁺][A⁻]/[HA]<br>
+                            <strong>Weak Base:</strong> K_b = [BH⁺][OH⁻]/[B]<br>
+                            <strong>Relationship:</strong> K_a × K_b = K_w = 1.0 × 10⁻¹⁴
+                        </div>
+
+                        <div class="step-by-step">
+                            <h4>ICE Table Method:</h4>
+                            <ol>
+                                <li><strong>I</strong>nitial: Write initial concentrations</li>
+                                <li><strong>C</strong>hange: Show changes (usually -x, +x)</li>
+                                <li><strong>E</strong>quilibrium: Initial ± Change</li>
+                                <li>Substitute into K_a or K_b expression</li>
+                                <li>Solve for x (use approximations when valid)</li>
+                            </ol>
+                        </div>
+
+                        <div class="example-box">
+                            <strong>ICE Table Example: 0.10 M CH₃COOH (K_a = 1.8 × 10⁻⁵)</strong><br>
+                            CH₃COOH ⇌ H⁺ + CH₃COO⁻<br>
+                            I: 0.10 M, 0, 0<br>
+                            C: -x, +x, +x<br>
+                            E: 0.10-x, x, x<br>
+                            K_a = x²/(0.10-x) = 1.8 × 10⁻⁵<br>
+                            Approximation: x² ≈ 1.8 × 10⁻⁶<br>
+                            x = 1.3 × 10⁻³ M = [H⁺], pH = 2.87
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-header" onclick="toggleSubsection(this)">
+                        Buffer Systems <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="subsection-content">
+                        <div class="key-concept">
+                            <strong>Buffer:</strong> Resists pH changes when small amounts of acid/base added<br>
+                            <strong>Components:</strong> Weak acid + conjugate base OR weak base + conjugate acid
+                        </div>
+
+                        <div class="formula-box">
+                            <strong>Henderson-Hasselbalch Equation:</strong><br>
+                            pH = pK_a + log([A⁻]/[HA])<br>
+                            pOH = pK_b + log([BH⁺]/[B])
+                        </div>
+
+                        <div class="exam-tip">
+                            <strong>⚡ Buffer Exam Tips:</strong><br>
+                            • Best buffers: pK_a ≈ desired pH<br>
+                            • Buffer capacity highest when [acid] = [base]<br>
+                            • Common biological buffers: phosphate (pH 7.4)<br>
+                            • Adding acid consumes base; adding base consumes acid
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Chemical Equilibrium - Complete Section -->
+            <section class="topic-section" id="equilibrium">
+                <div class="topic-header">
+                    <h2>Chemical Equilibrium</h2>
+                </div>
+
+                <div class="topic-intro">
+                    Chemical equilibrium governs reaction completion and product distribution. Understanding equilibrium constants and Le Châtelier's principle is crucial for predicting reaction behavior.
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-header" onclick="toggleSubsection(this)">
+                        Equilibrium Constants and Calculations <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="subsection-content active">
+                        <div class="formula-box">
+                            <strong>For: aA + bB ⇌ cC + dD</strong><br>
+                            <strong>K_c = [C]^c[D]^d / [A]^a[B]^b</strong> (concentrations)<br>
+                            <strong>K_p = (P_C)^c(P_D)^d / (P_A)^a(P_B)^b</strong> (pressures)<br>
+                            <strong>Relationship:</strong> K_p = K_c(RT)^Δn<br>
+                            where Δn = (moles gaseous products) - (moles gaseous reactants)
+                        </div>
+
+                        <div class="key-concept">
+                            <strong>Interpreting K Values:</strong><br>
+                            • K >> 1 (K > 1000): Products strongly favored<br>
+                            • K << 1 (K < 0.001): Reactants strongly favored<br>
+                            • K ≈ 1 (0.001 < K < 1000): Significant amounts of both
+                        </div>
+
+                        <div class="practice-problem">
+                            <strong>Equilibrium Calculation:</strong><br>
+                            For N₂O₄(g) ⇌ 2NO₂(g), K_c = 0.36 at 100°C<br>
+                            If [N₂O₄] = 0.042 M at equilibrium, find [NO₂]<br><br>
+                            <strong>Solution:</strong><br>
+                            K_c = [NO₂]² / [N₂O₄] = 0.36<br>
+                            0.36 = [NO₂]² / 0.042<br>
+                            [NO₂]² = 0.36 × 0.042 = 0.0151<br>
+                            [NO₂] = 0.123 M
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-header" onclick="toggleSubsection(this)">
+                        Le Châtelier's Principle (Complete) <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="subsection-content">
+                        <div class="key-concept">
+                            <strong>Le Châtelier's Principle:</strong> When a system at equilibrium is disturbed, it shifts to counteract the disturbance and reestablish equilibrium.
+                        </div>
+
+                        <div class="constants-table">
+                            <table>
+                                <thead>
+                                    <tr><th>Stress Applied</th><th>Equilibrium Shift</th><th>Example</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Add reactant</td><td>Right (toward products)</td><td>Add more N₂ → more NH₃</td></tr>
+                                    <tr><td>Remove product</td><td>Right (toward products)</td><td>Remove NH₃ → shift right</td></tr>
+                                    <tr><td>Increase temperature</td><td>Toward endothermic side</td><td>Heat + reactants ⇌ products</td></tr>
+                                    <tr><td>Increase pressure</td><td>Toward fewer gas molecules</td><td>4 mol gas ⇌ 2 mol gas</td></tr>
+                                    <tr><td>Add catalyst</td><td>No shift (reaches equilibrium faster)</td><td>K unchanged</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="example-box">
+                            <strong>Classic Example:</strong> N₂(g) + 3H₂(g) ⇌ 2NH₃(g) + heat<br>
+                            • Add N₂ → shift right (more NH₃)<br>
+                            • Increase T → shift left (endothermic direction)<br>
+                            • Increase P → shift right (4 mol → 2 mol)<br>
+                            • Remove NH₃ → shift right (replace NH₃)
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section class="topic-section" id="stoichiometry">
                 <div class="topic-header">
                     <h2>Stoichiometry and Chemical Reactions</h2>
@@ -1447,11 +1871,335 @@
                         </div>
                     </div>
                 </div>
+            <!-- Reaction Kinetics - Complete Section -->
+            <section class="topic-section" id="kinetics">
+                <div class="topic-header">
+                    <h2>Reaction Kinetics</h2>
+                </div>
+
+                <div class="topic-intro">
+                    Kinetics studies reaction rates and mechanisms. Unlike thermodynamics (can it happen?), kinetics asks how fast will it happen? Essential for understanding catalysis and reaction pathways.
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-header" onclick="toggleSubsection(this)">
+                        Reaction Rates and Rate Laws <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="subsection-content active">
+                        <div class="formula-box">
+                            <strong>Rate Expressions:</strong><br>
+                            For A → B: Rate = -Δ[A]/Δt = +Δ[B]/Δt<br>
+                            For aA + bB → cC: Rate = -(1/a)Δ[A]/Δt = -(1/b)Δ[B]/Δt = (1/c)Δ[C]/Δt<br><br>
+                            <strong>Rate Law:</strong> Rate = k[A]^m[B]^n<br>
+                            where k = rate constant, m,n = orders (found experimentally)
+                        </div>
+
+                        <div class="key-concept">
+                            <strong>Reaction Orders:</strong><br>
+                            • Zero order: Rate independent of concentration<br>
+                            • First order: Rate ∝ [A]<br>
+                            • Second order: Rate ∝ [A]²<br>
+                            • Overall order = sum of individual orders
+                        </div>
+
+                        <div class="step-by-step">
+                            <h4>Finding Rate Law from Data:</h4>
+                            <ol>
+                                <li>Compare experiments where only one concentration changes</li>
+                                <li>Rate₂/Rate₁ = ([A₂]/[A₁])^m</li>
+                                <li>Solve for order m</li>
+                                <li>Repeat for other reactants</li>
+                                <li>Calculate k using any experiment</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-header" onclick="toggleSubsection(this)">
+                        Integrated Rate Laws <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="subsection-content">
+                        <div class="formula-box">
+                            <strong>Zero Order:</strong> [A] = [A]₀ - kt<br>
+                            Linear plot: [A] vs t, slope = -k<br><br>
+                            <strong>First Order:</strong> ln[A] = ln[A]₀ - kt<br>
+                            Linear plot: ln[A] vs t, slope = -k<br>
+                            <strong>Half-life:</strong> t₁/₂ = 0.693/k<br><br>
+                            <strong>Second Order:</strong> 1/[A] = 1/[A]₀ + kt<br>
+                            Linear plot: 1/[A] vs t, slope = k
+                        </div>
+
+                        <div class="exam-tip">
+                            <strong>⚡ Half-Life Key Points:</strong><br>
+                            • First order: t₁/₂ constant (independent of [A]₀)<br>
+                            • Zero order: t₁/₂ = [A]₀/2k (depends on [A]₀)<br>
+                            • Second order: t₁/₂ = 1/(k[A]₀) (depends on [A]₀)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-header" onclick="toggleSubsection(this)">
+                        Arrhenius Equation and Catalysis <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="subsection-content">
+                        <div class="formula-box">
+                            <strong>Arrhenius Equation:</strong><br>
+                            k = Ae^(-Ea/RT)<br>
+                            ln k = ln A - Ea/RT<br>
+                            <strong>Two-temperature form:</strong><br>
+                            ln(k₂/k₁) = (Ea/R)(1/T₁ - 1/T₂)
+                        </div>
+
+                        <div class="key-concept">
+                            <strong>Energy Diagrams:</strong><br>
+                            • Activation Energy (Ea): Minimum energy needed<br>
+                            • Catalyst: Lowers Ea, increases rate<br>
+                            • ΔH: Energy difference reactants → products<br>
+                            • Transition state: Highest energy point
+                        </div>
+
+                        <div class="lab-connection">
+                            <strong>🧪 Catalysis Applications:</strong><br>
+                            • Enzymes: Biological catalysts (specific, efficient)<br>
+                            • Heterogeneous: Different phase (Pt surface)<br>
+                            • Homogeneous: Same phase (dissolved acid)<br>
+                            • Industrial: Haber process (Fe catalyst)
+                        </div>
+                    </div>
+                </div>
             </section>
 
-            <!-- Additional sections would continue here following the same comprehensive pattern... -->
-            <!-- For brevity, I'll add the navigation for remaining sections but leave the content structure -->
+            <!-- Redox and Electrochemistry - Complete Section -->
+            <section class="topic-section" id="redox">
+                <div class="topic-header">
+                    <h2>Redox Reactions and Electrochemistry</h2>
+                </div>
 
+                <div class="topic-intro">
+                    Oxidation-reduction reactions involve electron transfer and are fundamental to batteries, corrosion, and biological processes. Master oxidation states and balancing for exam success.
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-header" onclick="toggleSubsection(this)">
+                        Oxidation States and Identification <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="subsection-content active">
+                        <div class="step-by-step">
+                            <h4>Rules for Assigning Oxidation States:</h4>
+                            <ol>
+                                <li><strong>Free elements:</strong> oxidation state = 0</li>
+                                <li><strong>Monatomic ions:</strong> oxidation state = charge</li>
+                                <li><strong>Hydrogen:</strong> usually +1 (except metal hydrides: -1)</li>
+                                <li><strong>Oxygen:</strong> usually -2 (except peroxides: -1, F₂O: +2)</li>
+                                <li><strong>Group 1 metals:</strong> always +1</li>
+                                <li><strong>Group 2 metals:</strong> always +2</li>
+                                <li><strong>Halogens:</strong> usually -1 (when most electronegative)</li>
+                                <li><strong>Sum rule:</strong> sum = charge on species</li>
+                            </ol>
+                        </div>
+
+                        <div class="example-box">
+                            <strong>Complex Examples:</strong><br>
+                            <strong>Cr₂O₇²⁻:</strong> 2(Cr) + 7(-2) = -2 → Cr = +6<br>
+                            <strong>NH₄⁺:</strong> N + 4(+1) = +1 → N = -3<br>
+                            <strong>H₂O₂:</strong> 2(+1) + 2(O) = 0 → O = -1<br>
+                            <strong>CaH₂:</strong> Ca + 2(H) = 0 → H = -1
+                        </div>
+
+                        <div class="key-concept">
+                            <strong>Redox Definitions:</strong><br>
+                            • <strong>Oxidation:</strong> Loss of electrons, ↑ oxidation state<br>
+                            • <strong>Reduction:</strong> Gain of electrons, ↓ oxidation state<br>
+                            • <strong>Memory:</strong> OIL RIG (Oxidation Is Loss, Reduction Is Gain)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-header" onclick="toggleSubsection(this)">
+                        Balancing Redox Equations <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="subsection-content">
+                        <div class="step-by-step">
+                            <h4>Half-Reaction Method (Acidic Solution):</h4>
+                            <ol>
+                                <li>Separate into oxidation and reduction half-reactions</li>
+                                <li>Balance atoms other than H and O</li>
+                                <li>Balance O by adding H₂O</li>
+                                <li>Balance H by adding H⁺</li>
+                                <li>Balance charge by adding electrons</li>
+                                <li>Multiply half-reactions to equalize electrons</li>
+                                <li>Add half-reactions and cancel common terms</li>
+                            </ol>
+                        </div>
+
+                        <div class="example-box">
+                            <strong>Complete Example:</strong> MnO₄⁻ + Fe²⁺ → Mn²⁺ + Fe³⁺ (acidic)<br><br>
+                            <strong>Reduction:</strong> MnO₄⁻ + 8H⁺ + 5e⁻ → Mn²⁺ + 4H₂O<br>
+                            <strong>Oxidation:</strong> Fe²⁺ → Fe³⁺ + e⁻<br>
+                            <strong>Balance e⁻:</strong> Multiply oxidation by 5<br>
+                            <strong>Final:</strong> MnO₄⁻ + 5Fe²⁺ + 8H⁺ → Mn²⁺ + 5Fe³⁺ + 4H₂O
+                        </div>
+
+                        <div class="exam-tip">
+                            <strong>⚡ Basic Solution Modification:</strong><br>
+                            After balancing in acidic conditions:<br>
+                            • Add OH⁻ to both sides to neutralize H⁺<br>
+                            • H⁺ + OH⁻ → H₂O<br>
+                            • Cancel excess water molecules
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-header" onclick="toggleSubsection(this)">
+                        Electrochemical Cells <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="subsection-content">
+                        <div class="key-concept">
+                            <strong>Galvanic Cell:</strong> Spontaneous redox → electrical energy<br>
+                            <strong>Electrolytic Cell:</strong> Electrical energy → non-spontaneous redox
+                        </div>
+
+                        <div class="formula-box">
+                            <strong>Cell Potential:</strong><br>
+                            E°_cell = E°_cathode - E°_anode<br>
+                            <strong>Nernst Equation:</strong><br>
+                            E = E° - (RT/nF)ln Q<br>
+                            E = E° - (0.0592/n)log Q (at 25°C)
+                        </div>
+
+                        <div class="constants-table">
+                            <table>
+                                <thead>
+                                    <tr><th>Half-Reaction</th><th>E° (V)</th><th>Strength</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>F₂ + 2e⁻ → 2F⁻</td><td>+2.87</td><td>Strong oxidizer</td></tr>
+                                    <tr><td>Cu²⁺ + 2e⁻ → Cu</td><td>+0.34</td><td>Moderate</td></tr>
+                                    <tr><td>2H⁺ + 2e⁻ → H₂</td><td>0.00</td><td>Reference</td></tr>
+                                    <tr><td>Zn²⁺ + 2e⁻ → Zn</td><td>-0.76</td><td>Strong reducer</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Nuclear Chemistry - Complete Section -->
+            <section class="topic-section" id="nuclear">
+                <div class="topic-header">
+                    <h2>Nuclear Chemistry</h2>
+                </div>
+
+                <div class="topic-intro">
+                    Nuclear chemistry involves changes in atomic nuclei, releasing enormous amounts of energy. Applications include medical imaging, carbon dating, nuclear power, and understanding stellar processes.
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-header" onclick="toggleSubsection(this)">
+                        Types of Radioactive Decay <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="subsection-content active">
+                        <div class="constants-table">
+                            <table>
+                                <thead>
+                                    <tr><th>Decay Type</th><th>Particle</th><th>Mass Change</th><th>Atomic # Change</th><th>Example</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Alpha (α)</td><td>⁴₂He</td><td>-4</td><td>-2</td><td>²³⁸U → ²³⁴Th + ⁴He</td></tr>
+                                    <tr><td>Beta⁻ (β⁻)</td><td>⁰₋₁e</td><td>0</td><td>+1</td><td>¹⁴C → ¹⁴N + ⁰₋₁e</td></tr>
+                                    <tr><td>Beta⁺ (β⁺)</td><td>⁰₊₁e</td><td>0</td><td>-1</td><td>¹¹C → ¹¹B + ⁰₊₁e</td></tr>
+                                    <tr><td>Gamma (γ)</td><td>⁰₀γ</td><td>0</td><td>0</td><td>⁶⁰Co* → ⁶⁰Co + γ</td></tr>
+                                    <tr><td>Electron Capture</td><td>⁰₋₁e</td><td>0</td><td>-1</td><td>⁴⁰K + e⁻ → ⁴⁰Ar</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="key-concept">
+                            <strong>Nuclear Stability:</strong><br>
+                            • Small nuclei: n/p ratio ≈ 1<br>
+                            • Large nuclei: n/p ratio ≈ 1.5<br>
+                            • Magic numbers: 2, 8, 20, 28, 50, 82, 126<br>
+                            • Even-even nuclei most stable
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-header" onclick="toggleSubsection(this)">
+                        Half-Life and Decay Kinetics <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="subsection-content">
+                        <div class="formula-box">
+                            <strong>First-Order Decay Kinetics:</strong><br>
+                            N(t) = N₀e^(-λt)<br>
+                            ln(N(t)/N₀) = -λt<br>
+                            <strong>Half-Life:</strong> t₁/₂ = 0.693/λ<br>
+                            <strong>Activity:</strong> A = λN (decays per second)
+                        </div>
+
+                        <div class="step-by-step">
+                            <h4>Half-Life Problem Strategy:</h4>
+                            <ol>
+                                <li>Identify what's given and what's asked</li>
+                                <li>Use N(t) = N₀(1/2)^(t/t₁/₂) for simple problems</li>
+                                <li>Use exponential form for complex calculations</li>
+                                <li>Remember: activity ∝ number of nuclei</li>
+                            </ol>
+                        </div>
+
+                        <div class="practice-problem">
+                            <strong>Carbon-14 Dating Problem:</strong><br>
+                            A fossil has 15% of the ¹⁴C activity of living tissue. How old is it? (t₁/₂ = 5730 years)<br><br>
+                            <strong>Solution:</strong><br>
+                            N(t)/N₀ = 0.15<br>
+                            0.15 = e^(-λt) = (1/2)^(t/5730)<br>
+                            ln(0.15) = -(t/5730) × ln(2)<br>
+                            t = -5730 × ln(0.15)/ln(2) = 15,600 years
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-header" onclick="toggleSubsection(this)">
+                        Nuclear Reactions and Energy <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="subsection-content">
+                        <div class="key-concept">
+                            <strong>Fission:</strong> Heavy nucleus splits → lighter nuclei + neutrons + energy<br>
+                            <strong>Fusion:</strong> Light nuclei combine → heavier nucleus + energy<br>
+                            <strong>Chain Reaction:</strong> Self-sustaining (critical mass needed)
+                        </div>
+
+                        <div class="formula-box">
+                            <strong>Mass-Energy Equivalence:</strong><br>
+                            E = mc²<br>
+                            <strong>Binding Energy:</strong> Energy to separate nucleus into nucleons<br>
+                            BE = (Δm)c² where Δm = mass defect
+                        </div>
+
+                        <div class="example-box">
+                            <strong>Famous Nuclear Reactions:</strong><br>
+                            <strong>Fission:</strong> ²³⁵U + n → ⁹⁰Sr + ¹⁴³Xe + 3n + energy<br>
+                            <strong>Fusion (Sun):</strong> 4¹H → ⁴He + 2β⁺ + energy<br>
+                            <strong>Transmutation:</strong> ¹⁴N + ⁴He → ¹⁷O + ¹H
+                        </div>
+
+                        <div class="lab-connection">
+                            <strong>🧪 Applications:</strong><br>
+                            • Medical: PET scans (¹⁸F), cancer treatment<br>
+                            • Energy: Nuclear power plants<br>
+                            • Dating: ¹⁴C (organic), U-Pb (rocks)<br>
+                            • Research: Particle accelerators, isotope production
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Practice Problems - Comprehensive Section -->
             <section class="topic-section" id="practice">
                 <div class="topic-header">
                     <h2>Practice Problems for Final Exam</h2>
@@ -1462,21 +2210,258 @@
                     Solutions provided with detailed explanations
                 </div>
 
-                <div class="practice-problem">
-                    <strong>Comprehensive Practice Set:</strong><br>
-                    Working on expanding this section with 50+ practice problems covering all topics...
-                    Each problem will include step-by-step solutions and exam tips.
+                <div class="subsection">
+                    <div class="subsection-header" onclick="toggleSubsection(this)">
+                        Stoichiometry & Mole Problems <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="subsection-content active">
+                        <div class="practice-problem">
+                            <strong>Problem 1:</strong> How many grams of CO₂ are produced when 25.0 g of C₈H₁₈ undergoes complete combustion?<br><br>
+                            
+                            <strong>Solution:</strong><br>
+                            1. Balance equation: 2C₈H₁₈ + 25O₂ → 16CO₂ + 18H₂O<br>
+                            2. Molar mass C₈H₁₈ = 8(12.01) + 18(1.008) = 114.23 g/mol<br>
+                            3. Moles C₈H₁₈ = 25.0 g ÷ 114.23 g/mol = 0.219 mol<br>
+                            4. Moles CO₂ = 0.219 mol C₈H₁₈ × (16 mol CO₂/2 mol C₈H₁₈) = 1.75 mol<br>
+                            5. Mass CO₂ = 1.75 mol × 44.01 g/mol = <strong>77.0 g CO₂</strong>
+                        </div>
+
+                        <div class="practice-problem">
+                            <strong>Problem 2:</strong> What is the limiting reactant when 15.0 g Al reacts with 25.0 g Cl₂?<br>
+                            2Al + 3Cl₂ → 2AlCl₃<br><br>
+                            
+                            <strong>Solution:</strong><br>
+                            Moles Al = 15.0 g ÷ 26.98 g/mol = 0.556 mol<br>
+                            Moles Cl₂ = 25.0 g ÷ 70.90 g/mol = 0.353 mol<br>
+                            From Al: 0.556 mol Al × (2 mol AlCl₃/2 mol Al) = 0.556 mol AlCl₃<br>
+                            From Cl₂: 0.353 mol Cl₂ × (2 mol AlCl₃/3 mol Cl₂) = 0.235 mol AlCl₃<br>
+                            <strong>Cl₂ is limiting</strong> (produces less product)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-header" onclick="toggleSubsection(this)">
+                        Gas Law Problems <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="subsection-content">
+                        <div class="practice-problem">
+                            <strong>Problem 3:</strong> A gas at 2.5 atm and 300 K occupies 5.0 L. What volume will it occupy at STP?<br><br>
+                            
+                            <strong>Solution:</strong><br>
+                            Using combined gas law: (P₁V₁)/T₁ = (P₂V₂)/T₂<br>
+                            (2.5 atm × 5.0 L)/300 K = (1.0 atm × V₂)/273 K<br>
+                            V₂ = (2.5 × 5.0 × 273)/(300 × 1.0) = <strong>11.4 L</strong>
+                        </div>
+
+                        <div class="practice-problem">
+                            <strong>Problem 4:</strong> How many moles of gas are in a 10.0 L container at 25°C and 2.0 atm?<br><br>
+                            
+                            <strong>Solution:</strong><br>
+                            Using PV = nRT<br>
+                            n = PV/RT = (2.0 atm × 10.0 L)/(0.0821 L·atm/mol·K × 298 K)<br>
+                            n = <strong>0.82 mol</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-header" onclick="toggleSubsection(this)">
+                        Acid-Base and pH Problems <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="subsection-content">
+                        <div class="practice-problem">
+                            <strong>Problem 5:</strong> Calculate the pH of 0.15 M NH₃ solution (Kb = 1.8 × 10⁻⁵)<br><br>
+                            
+                            <strong>Solution:</strong><br>
+                            NH₃ + H₂O ⇌ NH₄⁺ + OH⁻<br>
+                            ICE table: I: 0.15, 0, 0; C: -x, +x, +x; E: 0.15-x, x, x<br>
+                            Kb = x²/(0.15-x) ≈ x²/0.15 = 1.8 × 10⁻⁵<br>
+                            x² = 2.7 × 10⁻⁶, x = 1.6 × 10⁻³ M = [OH⁻]<br>
+                            pOH = -log(1.6 × 10⁻³) = 2.80<br>
+                            pH = 14.00 - 2.80 = <strong>11.20</strong>
+                        </div>
+
+                        <div class="practice-problem">
+                            <strong>Problem 6:</strong> What is the pH of a buffer containing 0.10 M CH₃COOH and 0.15 M CH₃COONa? (Ka = 1.8 × 10⁻⁵)<br><br>
+                            
+                            <strong>Solution:</strong><br>
+                            Using Henderson-Hasselbalch equation:<br>
+                            pH = pKa + log([A⁻]/[HA])<br>
+                            pKa = -log(1.8 × 10⁻⁵) = 4.74<br>
+                            pH = 4.74 + log(0.15/0.10) = 4.74 + 0.18 = <strong>4.92</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-header" onclick="toggleSubsection(this)">
+                        Thermochemistry Problems <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="subsection-content">
+                        <div class="practice-problem">
+                            <strong>Problem 7:</strong> Calculate ΔH for: C₂H₄(g) + H₂(g) → C₂H₆(g)<br>
+                            Given: ΔH°f[C₂H₄] = +52.3 kJ/mol, ΔH°f[C₂H₆] = -84.7 kJ/mol<br><br>
+                            
+                            <strong>Solution:</strong><br>
+                            ΔH°rxn = Σ ΔH°f(products) - Σ ΔH°f(reactants)<br>
+                            ΔH°rxn = [-84.7] - [52.3 + 0] = <strong>-137.0 kJ/mol</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-header" onclick="toggleSubsection(this)">
+                        Mixed Challenge Problems <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="subsection-content">
+                        <div class="practice-problem">
+                            <strong>Challenge Problem 1:</strong> A 25.0 mL sample of 0.100 M HCl is titrated with 0.0500 M NaOH. Calculate the pH after 40.0 mL of NaOH has been added.<br><br>
+                            
+                            <strong>Solution:</strong><br>
+                            Initial mol HCl = 0.0250 L × 0.100 M = 2.50 × 10⁻³ mol<br>
+                            Mol NaOH added = 0.0400 L × 0.0500 M = 2.00 × 10⁻³ mol<br>
+                            HCl + NaOH → NaCl + H₂O (1:1 ratio)<br>
+                            Excess HCl = 2.50 × 10⁻³ - 2.00 × 10⁻³ = 5.0 × 10⁻⁴ mol<br>
+                            Total volume = 25.0 + 40.0 = 65.0 mL = 0.0650 L<br>
+                            [H⁺] = 5.0 × 10⁻⁴ mol ÷ 0.0650 L = 7.7 × 10⁻³ M<br>
+                            pH = -log(7.7 × 10⁻³) = <strong>2.11</strong>
+                        </div>
+                    </div>
                 </div>
             </section>
 
+            <!-- Formula Sheet - Comprehensive Section -->
             <section class="topic-section" id="formulas">
                 <div class="topic-header">
                     <h2>Complete Formula Sheet</h2>
                 </div>
                 
-                <div class="formula-box">
-                    <strong>All Essential Formulas for Final Exam</strong><br>
-                    Organized by topic with units and applications...
+                <div class="exam-alert">
+                    📋 Essential formulas organized by topic - memorize these for your final!
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-header" onclick="toggleSubsection(this)">
+                        Basic Calculations & Units <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="subsection-content active">
+                        <div class="formula-box">
+                            <strong>Mole Relationships:</strong><br>
+                            n = m/M (moles = mass/molar mass)<br>
+                            N = n × NA (particles = moles × Avogadro's number)<br>
+                            V = n × 22.4 L (volume at STP = moles × 22.4 L/mol)<br><br>
+                            
+                            <strong>Concentration:</strong><br>
+                            M = n/V (molarity = moles/liters)<br>
+                            m = n/kg solvent (molality)<br>
+                            χ = n₁/(n₁ + n₂ + ...) (mole fraction)<br>
+                            Dilution: M₁V₁ = M₂V₂
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-header" onclick="toggleSubsection(this)">
+                        Gas Laws <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="subsection-content">
+                        <div class="formula-box">
+                            <strong>Individual Gas Laws:</strong><br>
+                            Boyle's Law: P₁V₁ = P₂V₂<br>
+                            Charles's Law: V₁/T₁ = V₂/T₂<br>
+                            Gay-Lussac's Law: P₁/T₁ = P₂/T₂<br><br>
+                            
+                            <strong>Combined & Ideal:</strong><br>
+                            Combined: (P₁V₁)/T₁ = (P₂V₂)/T₂<br>
+                            Ideal Gas Law: PV = nRT<br>
+                            Kinetic Energy: KE = (3/2)RT<br>
+                            RMS Speed: vrms = √(3RT/M)<br>
+                            Graham's Law: r₁/r₂ = √(M₂/M₁)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-header" onclick="toggleSubsection(this)">
+                        Thermochemistry <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="subsection-content">
+                        <div class="formula-box">
+                            <strong>Heat & Enthalpy:</strong><br>
+                            q = mcΔT (heat = mass × specific heat × temp change)<br>
+                            q = nCΔT (heat = moles × molar heat capacity × temp change)<br>
+                            ΔH = qp (enthalpy change at constant pressure)<br>
+                            ΔH°rxn = Σ ΔH°f(products) - Σ ΔH°f(reactants)<br><br>
+                            
+                            <strong>Calorimetry:</strong><br>
+                            qsystem + qsurroundings = 0<br>
+                            C = q/ΔT (heat capacity)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-header" onclick="toggleSubsection(this)">
+                        Acids, Bases & pH <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="subsection-content">
+                        <div class="formula-box">
+                            <strong>pH Relationships:</strong><br>
+                            pH = -log[H⁺]<br>
+                            pOH = -log[OH⁻]<br>
+                            pH + pOH = 14.00<br>
+                            Kw = [H⁺][OH⁻] = 1.0 × 10⁻¹⁴<br><br>
+                            
+                            <strong>Weak Acids/Bases:</strong><br>
+                            Ka = [H⁺][A⁻]/[HA]<br>
+                            Kb = [BH⁺][OH⁻]/[B]<br>
+                            Ka × Kb = Kw<br>
+                            Henderson-Hasselbalch: pH = pKa + log([A⁻]/[HA])
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-header" onclick="toggleSubsection(this)">
+                        Equilibrium & Kinetics <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="subsection-content">
+                        <div class="formula-box">
+                            <strong>Equilibrium:</strong><br>
+                            Kc = [C]c[D]d/[A]a[B]b<br>
+                            Kp = (PC)c(PD)d/(PA)a(PB)b<br>
+                            Kp = Kc(RT)Δn<br>
+                            Q vs K: Q < K (forward), Q = K (equilibrium), Q > K (reverse)<br><br>
+                            
+                            <strong>Kinetics:</strong><br>
+                            Rate = k[A]m[B]n<br>
+                            First order: ln[A] = ln[A]₀ - kt, t₁/₂ = 0.693/k<br>
+                            Second order: 1/[A] = 1/[A]₀ + kt<br>
+                            Arrhenius: k = Ae^(-Ea/RT), ln(k₂/k₁) = (Ea/R)(1/T₁ - 1/T₂)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <div class="subsection-header" onclick="toggleSubsection(this)">
+                        Colligative Properties & Nuclear <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="subsection-content">
+                        <div class="formula-box">
+                            <strong>Colligative Properties:</strong><br>
+                            ΔTb = Kb × m × i (boiling point elevation)<br>
+                            ΔTf = Kf × m × i (freezing point depression)<br>
+                            π = MRTi (osmotic pressure)<br>
+                            ΔP = χsolute × P°solvent (vapor pressure lowering)<br><br>
+                            
+                            <strong>Nuclear:</strong><br>
+                            N(t) = N₀e^(-λt) (radioactive decay)<br>
+                            t₁/₂ = 0.693/λ (half-life)<br>
+                            E = mc² (mass-energy equivalence)<br>
+                            A = λN (activity)
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -1504,14 +2489,28 @@
         }
 
         function showTopic(topicId) {
+            // Hide all sections
             const sections = document.querySelectorAll('.topic-section');
             sections.forEach(section => section.classList.remove('active'));
             
-            document.getElementById(topicId).classList.add('active');
+            // Show selected section
+            const targetSection = document.getElementById(topicId);
+            if (targetSection) {
+                targetSection.classList.add('active');
+            }
             
+            // Update navigation - find the clicked nav item
             const navItems = document.querySelectorAll('.nav-item');
             navItems.forEach(item => item.classList.remove('active'));
-            event.target.classList.add('active');
+            
+            // Find and activate the correct nav item
+            const clickedNavItem = Array.from(navItems).find(item => 
+                item.getAttribute('onclick') && 
+                item.getAttribute('onclick').includes(`'${topicId}'`)
+            );
+            if (clickedNavItem) {
+                clickedNavItem.classList.add('active');
+            }
             
             updateProgress();
             
