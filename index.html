@@ -17,15 +17,16 @@
             color: #333;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
         }
 
         .container {
-            display: flex;
-            max-width: 1400px;
-            margin: 0 auto;
+            display: block;
             min-height: 100vh;
             background: white;
-            box-shadow: 0 0 30px rgba(0,0,0,0.1);
+            position: relative;
         }
 
         .sidebar {
@@ -34,15 +35,34 @@
             color: white;
             padding: 20px;
             position: fixed;
+            top: 0;
+            left: 0;
             height: 100vh;
             overflow-y: auto;
-            transform: translateX(-100%);
+            transform: translateX(0);
             transition: transform 0.3s ease;
             z-index: 1000;
         }
 
-        .sidebar.active {
-            transform: translateX(0);
+        .sidebar::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .sidebar::-webkit-scrollbar-track {
+            background: #34495e;
+        }
+
+        .sidebar::-webkit-scrollbar-thumb {
+            background: #3498db;
+            border-radius: 4px;
+        }
+
+        .sidebar::-webkit-scrollbar-thumb:hover {
+            background: #2980b9;
+        }
+
+        .sidebar.desktop-hidden {
+            transform: translateX(-300px);
         }
 
         .sidebar h2 {
@@ -89,12 +109,31 @@
         .main-content {
             flex: 1;
             padding: 20px 40px;
-            margin-left: 0;
+            margin-left: 300px;
             transition: margin-left 0.3s ease;
+            overflow-x: auto;
+        }
+
+        .main-content > * {
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .main-content.sidebar-active {
             margin-left: 300px;
+        }
+
+        @media (min-width: 1400px) {
+            .main-content > * {
+                max-width: 1200px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .main-content {
+                padding: 30px 60px;
+            }
         }
 
         .header {
@@ -121,8 +160,8 @@
         .menu-toggle {
             position: fixed;
             top: 20px;
-            left: 20px;
-            background: #3498db;
+            left: 320px;
+            background: #34495e;
             color: white;
             border: none;
             padding: 12px 18px;
@@ -134,7 +173,7 @@
         }
 
         .menu-toggle:hover {
-            background: #2980b9;
+            background: #2c3e50;
             transform: scale(1.05);
         }
 
@@ -436,21 +475,39 @@
         }
 
         @media (max-width: 768px) {
-            .main-content {
-                padding: 15px;
+            .sidebar {
+                width: 100vw;
+                transform: translateX(-100vw);
             }
             
-            .sidebar {
-                width: 100%;
-                transform: translateX(-100%);
+            .sidebar.active {
+                transform: translateX(0);
+            }
+            
+            .sidebar.desktop-hidden {
+                transform: translateX(-100vw);
+            }
+            
+            .main-content {
+                padding: 15px;
+                margin-left: 0 !important;
             }
             
             .main-content.sidebar-active {
-                margin-left: 0;
+                margin-left: 0 !important;
             }
             
             .subsection-content {
                 padding: 20px;
+            }
+            
+            .menu-toggle {
+                left: 20px !important;
+                background: #3498db !important;
+            }
+            
+            .menu-toggle:hover {
+                background: #2980b9 !important;
             }
         }
     </style>
@@ -1431,8 +1488,19 @@
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
             const mainContent = document.getElementById('mainContent');
-            sidebar.classList.toggle('active');
-            mainContent.classList.toggle('sidebar-active');
+            const menuToggle = document.querySelector('.menu-toggle');
+            
+            if (window.innerWidth > 768) {
+                // Desktop behavior
+                sidebar.classList.toggle('desktop-hidden');
+                const isHidden = sidebar.classList.contains('desktop-hidden');
+                mainContent.style.marginLeft = isHidden ? '0' : '300px';
+                menuToggle.style.left = isHidden ? '20px' : '320px';
+            } else {
+                // Mobile behavior
+                sidebar.classList.toggle('active');
+                mainContent.classList.toggle('sidebar-active');
+            }
         }
 
         function showTopic(topicId) {
@@ -1447,8 +1515,12 @@
             
             updateProgress();
             
+            // Only close sidebar on mobile
             if (window.innerWidth <= 768) {
-                toggleSidebar();
+                const sidebar = document.getElementById('sidebar');
+                const mainContent = document.getElementById('mainContent');
+                sidebar.classList.remove('active');
+                mainContent.classList.remove('sidebar-active');
             }
         }
 
@@ -1494,6 +1566,25 @@
         document.addEventListener('DOMContentLoaded', function() {
             updateProgress();
             
+            // Initialize proper sidebar state based on screen size
+            const sidebar = document.getElementById('sidebar');
+            const mainContent = document.getElementById('mainContent');
+            const menuToggle = document.querySelector('.menu-toggle');
+            
+            if (window.innerWidth > 768) {
+                // Desktop: sidebar visible by default
+                sidebar.classList.remove('active', 'desktop-hidden');
+                mainContent.style.marginLeft = '300px';
+                mainContent.classList.remove('sidebar-active');
+                menuToggle.style.left = '320px';
+            } else {
+                // Mobile: sidebar hidden by default
+                sidebar.classList.remove('active', 'desktop-hidden');
+                mainContent.style.marginLeft = '0';
+                mainContent.classList.remove('sidebar-active');
+                menuToggle.style.left = '20px';
+            }
+            
             // Auto-expand first subsection of active topic
             const activeSection = document.querySelector('.topic-section.active');
             if (activeSection) {
@@ -1504,6 +1595,33 @@
                     content.classList.add('active');
                     icon.classList.add('rotated');
                 }
+            }
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', function() {
+            const sidebar = document.getElementById('sidebar');
+            const mainContent = document.getElementById('mainContent');
+            const menuToggle = document.querySelector('.menu-toggle');
+            
+            if (window.innerWidth > 768) {
+                // Desktop: ensure sidebar is visible unless explicitly hidden
+                sidebar.classList.remove('active');
+                if (!sidebar.classList.contains('desktop-hidden')) {
+                    mainContent.style.marginLeft = '300px';
+                    menuToggle.style.left = '320px';
+                } else {
+                    mainContent.style.marginLeft = '0';
+                    menuToggle.style.left = '20px';
+                }
+                mainContent.classList.remove('sidebar-active');
+            } else {
+                // Mobile: hide sidebar and reset positions
+                sidebar.classList.remove('desktop-hidden');
+                sidebar.classList.remove('active');
+                mainContent.classList.remove('sidebar-active');
+                mainContent.style.marginLeft = '0';
+                menuToggle.style.left = '20px';
             }
         });
 
